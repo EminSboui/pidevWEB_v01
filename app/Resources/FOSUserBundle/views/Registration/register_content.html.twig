@@ -1,0 +1,157 @@
+{% trans_default_domain 'FOSUserBundle' %}
+<section id="hero" class="login">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+                <div id="login">
+                    <div class="text-center"><img src="{{ asset('Assets/img/logi3.png') }}" alt="Image"
+                                                  data-retina="true"></div>
+                    <hr>
+                    <table class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 table-responsive">
+                        <tbody>
+                        <tr>
+                            <td>
+                                <div class="radio">
+                                    <label> <input type="radio" name="type" id="type" class="checkbox" value="Client">Client</label>
+                                </div>
+
+                            </td>
+                            <td>
+                                <div class="radio">
+                                    <label> <input type="radio" name="type" id="typee" class="checkbox" value="Pastry">Pastry</label>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div id="selected">
+
+                    </div>
+                    <script src="{{ asset('Assets/js/jquery-1.11.2.min.js') }}"></script>
+                    {% block javascripts %}
+                    <script>
+                        $(document).ready(function () {
+                            $('input:radio[name="type"]').change(
+                                function () {
+                                    if ($(this).is(':checked') && $(this).val() == 'Pastry') {
+                                        $('#tab').show();
+                                        $('#pastryname').append('                        <td>Pastry Name :</td>\n' +
+                                            '                            <td>{{ form_widget(form.pastryname) }}</td>');
+                                        $('#worktime').append('                            <td>Work Time :</td>\n' +
+                                            '                            <td>{{ form_widget(form.worktime) }}</td>');
+                                        $('#dayoff').append('                            <td>Day Off :</td>\n' +
+                                            '                            <td>{{ form_widget(form.dayoff) }}</td>');
+                                        $('#specialty').append('                            <td>Speciality :</td>\n' +
+                                            '                            <td>{{ form_widget(form.specialty) }}</td>');
+                                        $('#service').append('                            <td>Service :</td>\n' +
+                                            '                            <td>{{ form_widget(form.service) }}</td>');
+                                        $('#mop').append('                            <td>Means Of Payment :</td>\n' +
+                                            '                            <td>{{ form_widget(form.meansofpayment) }}</td>');
+                                        $('#req').append('                            <td>Requirement :</td>\n' +
+                                            '                            <td>{{ form_widget(form.requirement) }}</td>');
+                                    }
+                                    else if ($(this).is(':checked') && $(this).val() == 'Client') {
+                                        $('#tab').show();
+                                        $('#pastryname').empty();
+                                        $('#worktime').empty();
+                                        $('#dayoff').empty();
+                                        $('#specialty').empty();
+                                        $('#service').empty();
+                                        $('#mop').empty();
+                                        $('#req').empty();
+                                    }
+                                });
+                        })
+
+
+                    </script>
+                    {% endblock javascripts %}
+                    {{ form_start(form, {'method': 'post', 'action': path('register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+
+
+                    <table class="table-responsive" id="tab" hidden>
+                        <tr>
+                            <td>{{ form_label(form.firstname) }}</td>
+                            <td>{{ form_widget(form.firstname) }}</td>
+                        </tr>
+                        <tr>
+                            <td>Last Name :</td>
+                            <td>{{ form_widget(form.lastname) }}</td>
+                        </tr>
+                        <tr>
+                            <td>Username :</td>
+                            <td>{{ form_widget(form.username) }}</td>
+                        </tr>
+                        <tr id="pastryname">
+
+                        </tr>
+                        <tr>
+                            <td>Email :</td>
+                            <td>{{ form_widget(form.email) }}</td>
+                        </tr>
+                        <tr>
+                            <td>Password :</td>
+                            <td>{{ form_widget(form.plainPassword.first) }}</td>
+                        </tr>
+                        <tr>
+                            <td>Retype Password :</td>
+                            <td>{{ form_widget(form.plainPassword.second) }}</td>
+                        </tr>
+                        <tr>
+                            <td>Phone :</td>
+                            <td>{{ form_widget(form.phone) }}</td>
+                        </tr>
+                        <tr>
+                            <td>Town :</td>
+                            <td>{{ form_widget(form.town) }}</td>
+                        </tr>
+                        <tr>
+                            <td>Picture :</td>
+                            <td>{{ form_widget(form.picture) }}</td>
+                        </tr>
+                        <tr>
+                            <td>Address :</td>
+                            <td>{{ form_widget(form.address) }}</td>
+                        </tr>
+                        <tr id="worktime">
+
+                        </tr>
+                        <tr id="dayoff">
+
+                        </tr>
+                        <tr id="specialty">
+
+                        </tr>
+                        <tr id="service">
+
+                        </tr>
+                        <tr>
+                            <td>Postal Code :</td>
+                            <td>{{ form_widget(form.postalcode) }}</td>
+                        </tr>
+                        <tr>
+                            <td>Website :</td>
+                            <td>{{ form_widget(form.website) }}</td>
+                        </tr>
+                        <tr>
+                            <td>Facebook :</td>
+                            <td>{{ form_widget(form.facebook) }}</td>
+                        </tr>
+                        <tr id="mop">
+
+                        </tr>
+                        <tr id="req">
+
+                        </tr>
+
+                    </table>
+
+                    <div>
+                        <input type="submit" class="btn_full" value="{{ 'registration.submit'|trans }}"/>
+                    </div>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
