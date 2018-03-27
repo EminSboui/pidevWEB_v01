@@ -16,11 +16,11 @@ class __TwigTemplate_5079ce74593c5b0279b3b5f461cc420181d0419358c523c28c4460b69b1
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_140ce3d3e51e5bf7af799e117f02317daf688e269ddb83ce87047c706dc9c6e3 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_140ce3d3e51e5bf7af799e117f02317daf688e269ddb83ce87047c706dc9c6e3->enter($__internal_140ce3d3e51e5bf7af799e117f02317daf688e269ddb83ce87047c706dc9c6e3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Registration/register_content.html.twig"));
+        $__internal_1ef67b7aefdd9873bd0721387477c64d1b9506cb24eb5794296ac8d8c344e847 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_1ef67b7aefdd9873bd0721387477c64d1b9506cb24eb5794296ac8d8c344e847->enter($__internal_1ef67b7aefdd9873bd0721387477c64d1b9506cb24eb5794296ac8d8c344e847_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Registration/register_content.html.twig"));
 
-        $__internal_69d43c6fa6f1fa9459926ada9da5788ac2a9ea594194f19e7d8ed329be9d46d9 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_69d43c6fa6f1fa9459926ada9da5788ac2a9ea594194f19e7d8ed329be9d46d9->enter($__internal_69d43c6fa6f1fa9459926ada9da5788ac2a9ea594194f19e7d8ed329be9d46d9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Registration/register_content.html.twig"));
+        $__internal_06092b8dd9f3976d6426ba7e70b8fc01d99a0edc0881d3c3ee3cdc7373c06530 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_06092b8dd9f3976d6426ba7e70b8fc01d99a0edc0881d3c3ee3cdc7373c06530->enter($__internal_06092b8dd9f3976d6426ba7e70b8fc01d99a0edc0881d3c3ee3cdc7373c06530_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Registration/register_content.html.twig"));
 
         // line 2
         echo "<section id=\"hero\" class=\"login\">
@@ -202,21 +202,21 @@ class __TwigTemplate_5079ce74593c5b0279b3b5f461cc420181d0419358c523c28c4460b69b1
     </div>
 </section>";
         
-        $__internal_140ce3d3e51e5bf7af799e117f02317daf688e269ddb83ce87047c706dc9c6e3->leave($__internal_140ce3d3e51e5bf7af799e117f02317daf688e269ddb83ce87047c706dc9c6e3_prof);
+        $__internal_1ef67b7aefdd9873bd0721387477c64d1b9506cb24eb5794296ac8d8c344e847->leave($__internal_1ef67b7aefdd9873bd0721387477c64d1b9506cb24eb5794296ac8d8c344e847_prof);
 
         
-        $__internal_69d43c6fa6f1fa9459926ada9da5788ac2a9ea594194f19e7d8ed329be9d46d9->leave($__internal_69d43c6fa6f1fa9459926ada9da5788ac2a9ea594194f19e7d8ed329be9d46d9_prof);
+        $__internal_06092b8dd9f3976d6426ba7e70b8fc01d99a0edc0881d3c3ee3cdc7373c06530->leave($__internal_06092b8dd9f3976d6426ba7e70b8fc01d99a0edc0881d3c3ee3cdc7373c06530_prof);
 
     }
 
     // line 31
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_306cae345da55f8302c98c3dbc4644964bc38547634d29d9e61758760ad8efa7 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_306cae345da55f8302c98c3dbc4644964bc38547634d29d9e61758760ad8efa7->enter($__internal_306cae345da55f8302c98c3dbc4644964bc38547634d29d9e61758760ad8efa7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_387e376c18ecca4f1b053148397f07c2dc7027e14653e1c98ce0dab8409b0f0a = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_387e376c18ecca4f1b053148397f07c2dc7027e14653e1c98ce0dab8409b0f0a->enter($__internal_387e376c18ecca4f1b053148397f07c2dc7027e14653e1c98ce0dab8409b0f0a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        $__internal_bda2644e18be04c6ba9e1a058cad1baeedbe39b6b67323296d955d208e83c9d1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_bda2644e18be04c6ba9e1a058cad1baeedbe39b6b67323296d955d208e83c9d1->enter($__internal_bda2644e18be04c6ba9e1a058cad1baeedbe39b6b67323296d955d208e83c9d1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_d62b73a36ac281398ab86f87fe12d72d1bc1c8289582fdf37cae3ed260b56950 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_d62b73a36ac281398ab86f87fe12d72d1bc1c8289582fdf37cae3ed260b56950->enter($__internal_d62b73a36ac281398ab86f87fe12d72d1bc1c8289582fdf37cae3ed260b56950_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         // line 32
         echo "                    <script>
@@ -278,10 +278,10 @@ class __TwigTemplate_5079ce74593c5b0279b3b5f461cc420181d0419358c523c28c4460b69b1
                     </script>
                     ";
         
-        $__internal_bda2644e18be04c6ba9e1a058cad1baeedbe39b6b67323296d955d208e83c9d1->leave($__internal_bda2644e18be04c6ba9e1a058cad1baeedbe39b6b67323296d955d208e83c9d1_prof);
+        $__internal_d62b73a36ac281398ab86f87fe12d72d1bc1c8289582fdf37cae3ed260b56950->leave($__internal_d62b73a36ac281398ab86f87fe12d72d1bc1c8289582fdf37cae3ed260b56950_prof);
 
         
-        $__internal_306cae345da55f8302c98c3dbc4644964bc38547634d29d9e61758760ad8efa7->leave($__internal_306cae345da55f8302c98c3dbc4644964bc38547634d29d9e61758760ad8efa7_prof);
+        $__internal_387e376c18ecca4f1b053148397f07c2dc7027e14653e1c98ce0dab8409b0f0a->leave($__internal_387e376c18ecca4f1b053148397f07c2dc7027e14653e1c98ce0dab8409b0f0a_prof);
 
     }
 
@@ -466,6 +466,6 @@ class __TwigTemplate_5079ce74593c5b0279b3b5f461cc420181d0419358c523c28c4460b69b1
             </div>
         </div>
     </div>
-</section>", "@FOSUser/Registration/register_content.html.twig", "C:\\Users\\Amine Sboui\\PhpstormProjects\\pidevWebGit\\pidevweb\\app\\Resources\\FOSUserBundle\\views\\Registration\\register_content.html.twig");
+</section>", "@FOSUser/Registration/register_content.html.twig", "C:\\wamp64\\www\\pidevWEB_v1.0\\app\\Resources\\FOSUserBundle\\views\\Registration\\register_content.html.twig");
     }
 }
