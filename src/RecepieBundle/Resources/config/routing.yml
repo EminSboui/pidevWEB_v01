@@ -1,0 +1,3 @@
+recepie_homepage:
+    path:     /
+    defaults: { _controller: RecepieBundle:Default:index }

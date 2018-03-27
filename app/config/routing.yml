@@ -1,3 +1,7 @@
+recepie:
+    resource: "@RecepieBundle/Resources/config/routing.yml"
+    prefix:   /
+
 base:
     resource: "@baseBundle/Resources/config/routing.yml"
     prefix:   /

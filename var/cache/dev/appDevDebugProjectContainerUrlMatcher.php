@@ -103,6 +103,15 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
+        // recepie_homepage
+        if ('' === $trimmedPathinfo) {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($rawPathinfo.'/', 'recepie_homepage');
+            }
+
+            return array (  '_controller' => 'RecepieBundle\\Controller\\DefaultController::indexAction',  '_route' => 'recepie_homepage',);
+        }
+
         // base_homepage
         if ('' === $trimmedPathinfo) {
             if (substr($pathinfo, -1) !== '/') {
