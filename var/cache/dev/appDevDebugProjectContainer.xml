@@ -19,7 +19,11 @@
       <parameter key="AppBundle">AppBundle\AppBundle</parameter>
       <parameter key="baseBundle">baseBundle\baseBundle</parameter>
       <parameter key="FOSUserBundle">FOS\UserBundle\FOSUserBundle</parameter>
-      <parameter key="HomeBundle">BackOffice\HomeBundle\HomeBundle</parameter>
+      <parameter key="ForumBundle">ForumBundle\ForumBundle</parameter>
+      <parameter key="KnpPaginatorBundle">Knp\Bundle\PaginatorBundle\KnpPaginatorBundle</parameter>
+      <parameter key="MessengerBundle">MessengerBundle\MessengerBundle</parameter>
+      <parameter key="FOSMessageBundle">FOS\MessageBundle\FOSMessageBundle</parameter>
+      <parameter key="AdminBundle">AdminBundle\AdminBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -77,10 +81,30 @@
         <parameter key="path">C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle</parameter>
         <parameter key="namespace">FOS\UserBundle</parameter>
       </parameter>
-      <parameter key="HomeBundle" type="collection">
+      <parameter key="ForumBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\src\BackOffice\HomeBundle</parameter>
-        <parameter key="namespace">BackOffice\HomeBundle</parameter>
+        <parameter key="path">C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\src\ForumBundle</parameter>
+        <parameter key="namespace">ForumBundle</parameter>
+      </parameter>
+      <parameter key="KnpPaginatorBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\knplabs\knp-paginator-bundle</parameter>
+        <parameter key="namespace">Knp\Bundle\PaginatorBundle</parameter>
+      </parameter>
+      <parameter key="MessengerBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\src\MessengerBundle</parameter>
+        <parameter key="namespace">MessengerBundle</parameter>
+      </parameter>
+      <parameter key="FOSMessageBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle</parameter>
+        <parameter key="namespace">FOS\MessageBundle</parameter>
+      </parameter>
+      <parameter key="AdminBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\src\AdminBundle</parameter>
+        <parameter key="namespace">AdminBundle</parameter>
       </parameter>
       <parameter key="DebugBundle" type="collection">
         <parameter key="parent">null</parameter>
@@ -117,8 +141,8 @@
     <parameter key="database_password">null</parameter>
     <parameter key="mailer_transport">smtp</parameter>
     <parameter key="mailer_host">127.0.0.1</parameter>
-    <parameter key="mailer_user">null</parameter>
-    <parameter key="mailer_password">null</parameter>
+    <parameter key="mailer_user">amine94sboui@gmail.com</parameter>
+    <parameter key="mailer_password">Password50783037</parameter>
     <parameter key="secret">7c5a1183dd5d60301d4768d2b5f68cc908df92e4</parameter>
     <parameter key="locale">en</parameter>
     <parameter key="images_directory">C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\app/../web/uploads/images</parameter>
@@ -170,6 +194,9 @@
     <parameter key="security.authentication.trust_resolver.anonymous_class">Symfony\Component\Security\Core\Authentication\Token\AnonymousToken</parameter>
     <parameter key="security.authentication.trust_resolver.rememberme_class">Symfony\Component\Security\Core\Authentication\Token\RememberMeToken</parameter>
     <parameter key="security.role_hierarchy.roles" type="collection">
+      <parameter key="ROLE_CLIENT" type="collection">
+        <parameter>ROLE_CLIENT</parameter>
+      </parameter>
       <parameter key="ROLE_ADMIN" type="collection">
         <parameter>ROLE_USER</parameter>
       </parameter>
@@ -226,8 +253,8 @@
     <parameter key="swiftmailer.mailer.default.transport.smtp.encryption">null</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.port">25</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.host">127.0.0.1</parameter>
-    <parameter key="swiftmailer.mailer.default.transport.smtp.username">null</parameter>
-    <parameter key="swiftmailer.mailer.default.transport.smtp.password">null</parameter>
+    <parameter key="swiftmailer.mailer.default.transport.smtp.username">amine94sboui@gmail.com</parameter>
+    <parameter key="swiftmailer.mailer.default.transport.smtp.password">Password50783037</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.auth_mode">null</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.timeout">30</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.source_ip">null</parameter>
@@ -405,6 +432,20 @@
       <parameter>ResetPassword</parameter>
       <parameter>Default</parameter>
     </parameter>
+    <parameter key="knp_paginator.class">Knp\Component\Pager\Paginator</parameter>
+    <parameter key="knp_paginator.helper.processor.class">Knp\Bundle\PaginatorBundle\Helper\Processor</parameter>
+    <parameter key="knp_paginator.template.pagination">KnpPaginatorBundle:Pagination:twitter_bootstrap_v3_pagination.html.twig</parameter>
+    <parameter key="knp_paginator.template.filtration">@KnpPaginator/Pagination/filtration.html.twig</parameter>
+    <parameter key="knp_paginator.template.sortable">KnpPaginatorBundle:Pagination:sortable_link.html.twig</parameter>
+    <parameter key="knp_paginator.page_range">5</parameter>
+    <parameter key="fos_message.message_meta_class">MessengerBundle\Entity\MessageMetadata</parameter>
+    <parameter key="fos_message.thread_meta_class">MessengerBundle\Entity\ThreadMetadata</parameter>
+    <parameter key="fos_message.message_class">MessengerBundle\Entity\Message</parameter>
+    <parameter key="fos_message.thread_class">MessengerBundle\Entity\Thread</parameter>
+    <parameter key="fos_message.new_thread_form.model">FOS\MessageBundle\FormModel\NewThreadMultipleMessage</parameter>
+    <parameter key="fos_message.new_thread_form.name">message</parameter>
+    <parameter key="fos_message.reply_form.model">FOS\MessageBundle\FormModel\ReplyMessage</parameter>
+    <parameter key="fos_message.reply_form.name">message</parameter>
     <parameter key="web_profiler.debug_toolbar.position">bottom</parameter>
     <parameter key="web_profiler.debug_toolbar.intercept_redirects">false</parameter>
     <parameter key="web_profiler.debug_toolbar.mode">2</parameter>
@@ -534,6 +575,17 @@
       <tag name="doctrine.event_listener" event="prePersist"/>
       <tag name="doctrine.event_listener" event="preUpdate"/>
       <argument type="service" id="resto.image_uploader_user"/>
+    </service>
+    <service id="resto.image_uploader_forum" class="ForumBundle\ImageUploadForum" public="false" autowire="true" autoconfigure="true">
+      <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\app/../web/uploads/images</argument>
+    </service>
+    <service id="resto.doctrine_image_listener_forum" class="ForumBundle\EventListener\ImageUploadListener" public="false" autowire="true" autoconfigure="true">
+      <tag name="doctrine.event_listener" event="prePersist"/>
+      <tag name="doctrine.event_listener" event="preUpdate"/>
+      <argument type="service" id="resto.image_uploader_forum"/>
+    </service>
+    <service id="redirect.after.login" class="AdminBundle\Redirection\AfterLoginRedirection">
+      <argument type="service" id="router.default"/>
     </service>
     <service id="controller_name_converter" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser" public="false">
       <tag name="monolog.logger" channel="request"/>
@@ -698,7 +750,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>9GvHohlhhwMcEb80zgG-29</argument>
+      <argument>UWUlshd8veWfO1svHCTmCZ</argument>
       <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -708,7 +760,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>9GvHohlhhwMcEb80zgG-29</argument>
+      <argument>UWUlshd8veWfO1svHCTmCZ</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -824,7 +876,7 @@
       <argument type="service" id="form.resolved_type_factory"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id="service_locator.5b4ccf77f01b1cf8797c86f4e9b37cd6"/>
+      <argument type="service" id="service_locator.31553de300c2a087f1e5ac1748004427"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.http_foundation"/>
@@ -1114,6 +1166,7 @@
         <argument type="collection">
           <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/config/validation.xml</argument>
           <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/config/validation.xml</argument>
+          <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/config/validation.xml</argument>
         </argument>
       </call>
       <call method="enableAnnotationMapping">
@@ -1146,7 +1199,7 @@
       <argument type="service" id="2_97afb120312859924c7121506251d63bc9b839386c0cc69ebe3e375d32b16bad"/>
     </service>
     <service id="validator.validator_factory" class="Symfony\Component\Validator\ContainerConstraintValidatorFactory" public="false">
-      <argument type="service" id="service_locator.39e66930232432ca5ba91e98fdd8a17b"/>
+      <argument type="service" id="service_locator.d1035efbd4e2f2796cab4e77371ef95b"/>
     </service>
     <service id="validator.expression" class="Symfony\Component\Validator\Constraints\ExpressionValidator">
       <tag name="validator.constraint_validator" alias="validator.expression"/>
@@ -1214,6 +1267,9 @@
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.ar.xlf</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.ar.yml</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.ar.yml</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.ar.xliff</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.ar.yml</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\validators.ar.yml</argument>
           </argument>
           <argument key="az" type="collection">
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.az.xlf</argument>
@@ -1240,6 +1296,7 @@
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.cs.xlf</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.cs.yml</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.cs.yml</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.cs.yml</argument>
           </argument>
           <argument key="cy" type="collection">
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.cy.xlf</argument>
@@ -1250,6 +1307,7 @@
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.da.xlf</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.da.yml</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.da.yml</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.da.xliff</argument>
           </argument>
           <argument key="de" type="collection">
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.de.xlf</argument>
@@ -1257,6 +1315,8 @@
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.de.xlf</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.de.yml</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.de.yml</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.de.xliff</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.de.yml</argument>
           </argument>
           <argument key="el" type="collection">
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.el.xlf</argument>
@@ -1271,6 +1331,9 @@
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.en.xlf</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.en.yml</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.en.yml</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.en.xliff</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.en.yml</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\validators.en.yml</argument>
           </argument>
           <argument key="es" type="collection">
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.es.xlf</argument>
@@ -1278,6 +1341,8 @@
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.es.xlf</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.es.yml</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.es.yml</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.es.xliff</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.es.yml</argument>
           </argument>
           <argument key="et" type="collection">
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.et.xlf</argument>
@@ -1296,6 +1361,8 @@
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.fa.xlf</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.fa.yml</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.fa.yml</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.fa.xliff</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.fa.yml</argument>
           </argument>
           <argument key="fi" type="collection">
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.fi.xlf</argument>
@@ -1309,6 +1376,9 @@
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.fr.xlf</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.fr.yml</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.fr.yml</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.fr.xliff</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.fr.yml</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\validators.fr.yml</argument>
           </argument>
           <argument key="gl" type="collection">
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.gl.xlf</argument>
@@ -1336,6 +1406,7 @@
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.hu.xlf</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.hu.yml</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.hu.yml</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.hu.xliff</argument>
           </argument>
           <argument key="hy" type="collection">
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.hy.xlf</argument>
@@ -1347,6 +1418,7 @@
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.id.xlf</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.id.yml</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.id.yml</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.id.xliff</argument>
           </argument>
           <argument key="it" type="collection">
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.it.xlf</argument>
@@ -1354,6 +1426,8 @@
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.it.xlf</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.it.yml</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.it.yml</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.it.xliff</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.it.yml</argument>
           </argument>
           <argument key="ja" type="collection">
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.ja.xlf</argument>
@@ -1374,6 +1448,7 @@
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.lt.xlf</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.lt.yml</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.lt.yml</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.lt.xliff</argument>
           </argument>
           <argument key="lv" type="collection">
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.lv.xlf</argument>
@@ -1399,6 +1474,8 @@
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.nl.xlf</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.nl.yml</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.nl.yml</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.nl.xliff</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.nl.yml</argument>
           </argument>
           <argument key="nn" type="collection">
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.nn.xlf</argument>
@@ -1416,6 +1493,9 @@
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.pl.xlf</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.pl.yml</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.pl.yml</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.pl.xliff</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.pl.yml</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\validators.pl.yml</argument>
           </argument>
           <argument key="pt" type="collection">
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.pt.xlf</argument>
@@ -1429,6 +1509,7 @@
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.pt_BR.xlf</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.pt_BR.yml</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.pt_BR.yml</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.pt_BR.xliff</argument>
           </argument>
           <argument key="ro" type="collection">
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.ro.xlf</argument>
@@ -1436,6 +1517,7 @@
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.ro.xlf</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.ro.yml</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.ro.yml</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.ro.xliff</argument>
           </argument>
           <argument key="ru" type="collection">
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.ru.xlf</argument>
@@ -1443,6 +1525,9 @@
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.ru.xlf</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.ru.yml</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.ru.yml</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.ru.xliff</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.ru.yml</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\validators.ru.yml</argument>
           </argument>
           <argument key="sk" type="collection">
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.sk.xlf</argument>
@@ -1450,6 +1535,7 @@
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.sk.xlf</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.sk.yml</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.sk.yml</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.sk.yml</argument>
           </argument>
           <argument key="sl" type="collection">
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.sl.xlf</argument>
@@ -1457,6 +1543,7 @@
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.sl.xlf</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.sl.yml</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.sl.yml</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.sl.yml</argument>
           </argument>
           <argument key="sq" type="collection">
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.sq.xlf</argument>
@@ -1479,6 +1566,8 @@
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.sv.xlf</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.sv.yml</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.sv.yml</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.sv.xliff</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.sv.yml</argument>
           </argument>
           <argument key="th" type="collection">
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.th.xlf</argument>
@@ -1535,6 +1624,10 @@
           <argument key="ky" type="collection">
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.ky.yml</argument>
             <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.ky.yml</argument>
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.ky.xliff</argument>
+          </argument>
+          <argument key="sw" type="collection">
+            <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.sw.xliff</argument>
           </argument>
         </argument>
       </argument>
@@ -1918,6 +2011,14 @@
         <argument>0</argument>
       </call>
       <call method="addListener">
+        <argument>kernel.request</argument>
+        <argument type="collection">
+          <argument type="service" id="knp_paginator.subscriber.sliding_pagination"/>
+          <argument>onKernelRequest</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
         <argument>kernel.response</argument>
         <argument type="collection">
           <argument type="service" id="response_listener"/>
@@ -2063,14 +2164,6 @@
       </call>
       <call method="addListener">
         <argument>kernel.request</argument>
-        <argument type="collection">
-          <argument type="service" id="debug.debug_handlers_listener"/>
-          <argument>configure</argument>
-        </argument>
-        <argument>2048</argument>
-      </call>
-      <call method="addListener">
-        <argument>console.command</argument>
         <argument type="collection">
           <argument type="service" id="debug.debug_handlers_listener"/>
           <argument>configure</argument>
@@ -2365,6 +2458,46 @@
         </argument>
         <argument>-128</argument>
       </call>
+      <call method="addListener">
+        <argument>knp_pager.before</argument>
+        <argument type="collection">
+          <argument type="service" id="knp_paginator.subscriber.paginate"/>
+          <argument>before</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>knp_pager.pagination</argument>
+        <argument type="collection">
+          <argument type="service" id="knp_paginator.subscriber.paginate"/>
+          <argument>pagination</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>knp_pager.before</argument>
+        <argument type="collection">
+          <argument type="service" id="knp_paginator.subscriber.sortable"/>
+          <argument>before</argument>
+        </argument>
+        <argument>1</argument>
+      </call>
+      <call method="addListener">
+        <argument>knp_pager.before</argument>
+        <argument type="collection">
+          <argument type="service" id="knp_paginator.subscriber.filtration"/>
+          <argument>before</argument>
+        </argument>
+        <argument>1</argument>
+      </call>
+      <call method="addListener">
+        <argument>knp_pager.pagination</argument>
+        <argument type="collection">
+          <argument type="service" id="knp_paginator.subscriber.sliding_pagination"/>
+          <argument>pagination</argument>
+        </argument>
+        <argument>1</argument>
+      </call>
     </service>
     <service id="debug.controller_resolver" class="Symfony\Component\HttpKernel\Controller\TraceableControllerResolver">
       <tag name="monolog.logger" channel="request"/>
@@ -2563,6 +2696,9 @@
     </service>
     <service id="security.role_hierarchy" class="Symfony\Component\Security\Core\Role\RoleHierarchy" public="false">
       <argument type="collection">
+        <argument key="ROLE_CLIENT" type="collection">
+          <argument>ROLE_CLIENT</argument>
+        </argument>
         <argument key="ROLE_ADMIN" type="collection">
           <argument>ROLE_USER</argument>
         </argument>
@@ -3045,21 +3181,16 @@
       <argument type="service" id="security.encoder_factory.generic"/>
       <argument>true</argument>
     </service>
-    <service id="security.authentication.success_handler.main.form_login" class="Symfony\Component\Security\Http\Authentication\DefaultAuthenticationSuccessHandler" public="false">
-      <argument type="service" id="security.http_utils"/>
-      <argument type="collection"/>
-      <call method="setOptions">
-        <argument type="collection">
-          <argument key="always_use_default_target_path">false</argument>
-          <argument key="default_target_path">/</argument>
-          <argument key="login_path">/login</argument>
-          <argument key="target_path_parameter">_target_path</argument>
-          <argument key="use_referer">false</argument>
-        </argument>
-      </call>
-      <call method="setProviderKey">
-        <argument>main</argument>
-      </call>
+    <service id="security.authentication.success_handler.main.form_login" class="Symfony\Component\Security\Http\Authentication\CustomAuthenticationSuccessHandler" public="false">
+      <argument type="service" id="redirect.after.login"/>
+      <argument type="collection">
+        <argument key="always_use_default_target_path">false</argument>
+        <argument key="default_target_path">/</argument>
+        <argument key="login_path">/login</argument>
+        <argument key="target_path_parameter">_target_path</argument>
+        <argument key="use_referer">false</argument>
+      </argument>
+      <argument>main</argument>
     </service>
     <service id="security.authentication.failure_handler.main.form_login" class="Symfony\Component\Security\Http\Authentication\DefaultAuthenticationFailureHandler" public="false">
       <argument type="service" id="http_kernel"/>
@@ -3106,12 +3237,12 @@
     </service>
     <service id="security.authentication.listener.anonymous.main" class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
       <argument type="service" id="security.token_storage"/>
-      <argument>5ab8e0a6e53475.71309680</argument>
+      <argument>5acd8be97bfba8.98511993</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
       <argument type="service" id="security.authentication.manager"/>
     </service>
     <service id="security.authentication.provider.anonymous.main" class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-      <argument>5ab8e0a6e53475.71309680</argument>
+      <argument>5acd8be97bfba8.98511993</argument>
     </service>
     <service id="security.exception_listener.main" class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
       <argument type="service" id="security.token_storage"/>
@@ -3231,6 +3362,12 @@
         <argument type="service" id="doctrine.twig.doctrine_extension"/>
       </call>
       <call method="addExtension">
+        <argument type="service" id="knp_paginator.twig.extension.pagination"/>
+      </call>
+      <call method="addExtension">
+        <argument type="service" id="fos_message.twig_extension.default"/>
+      </call>
+      <call method="addExtension">
         <argument type="service" id="twig.extension.dump"/>
       </call>
       <call method="addExtension">
@@ -3321,8 +3458,28 @@
         <argument>FOSUser</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\src\BackOffice\HomeBundle/Resources/views</argument>
-        <argument>Home</argument>
+        <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\src\ForumBundle/Resources/views</argument>
+        <argument>Forum</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\knplabs\knp-paginator-bundle/Resources/views</argument>
+        <argument>KnpPaginator</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\src\MessengerBundle/Resources/views</argument>
+        <argument>Messenger</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\app/Resources/FOSMessageBundle/views</argument>
+        <argument>FOSMessage</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/views</argument>
+        <argument>FOSMessage</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\src\AdminBundle/Resources/views</argument>
+        <argument>Admin</argument>
       </call>
       <call method="addPath">
         <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Bundle\DebugBundle/Resources/views</argument>
@@ -3482,8 +3639,28 @@
         <argument>FOSUser</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\src\BackOffice\HomeBundle/Resources/views</argument>
-        <argument>Home</argument>
+        <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\src\ForumBundle/Resources/views</argument>
+        <argument>Forum</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\knplabs\knp-paginator-bundle/Resources/views</argument>
+        <argument>KnpPaginator</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\src\MessengerBundle/Resources/views</argument>
+        <argument>Messenger</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\app/Resources/FOSMessageBundle/views</argument>
+        <argument>FOSMessage</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/views</argument>
+        <argument>FOSMessage</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\src\AdminBundle/Resources/views</argument>
+        <argument>Admin</argument>
       </call>
       <call method="addPath">
         <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\symfony\symfony\src\Symfony\Bundle\DebugBundle/Resources/views</argument>
@@ -3621,10 +3798,10 @@
         <argument type="service" id="3_356cb2c92462d4f441e93e09a8622154a7ab39804dc8bebb824467cc46cebe95"/>
       </argument>
       <call method="setUsername">
-        <argument>null</argument>
+        <argument>amine94sboui@gmail.com</argument>
       </call>
       <call method="setPassword">
-        <argument>null</argument>
+        <argument>Password50783037</argument>
       </call>
       <call method="setAuthMode">
         <argument>null</argument>
@@ -3787,6 +3964,13 @@
       </call>
       <call method="addEventListener">
         <argument type="collection">
+          <argument>prePersist</argument>
+          <argument>preUpdate</argument>
+        </argument>
+        <argument type="service" id="resto.doctrine_image_listener_forum"/>
+      </call>
+      <call method="addEventListener">
+        <argument type="collection">
           <argument>loadClassMetadata</argument>
         </argument>
         <argument type="service" id="doctrine.orm.default_listeners.attach_entity_listeners"/>
@@ -3900,6 +4084,9 @@
       <call method="setEntityNamespaces">
         <argument type="collection">
           <argument key="baseBundle">baseBundle\Entity</argument>
+          <argument key="ForumBundle">ForumBundle\Entity</argument>
+          <argument key="MessengerBundle">MessengerBundle\Entity</argument>
+          <argument key="FOSMessageBundle">FOS\MessageBundle\Entity</argument>
         </argument>
       </call>
       <call method="setMetadataCacheImpl">
@@ -3946,12 +4133,34 @@
       <argument type="service" id="annotations.cached_reader"/>
       <argument type="collection">
         <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\src\baseBundle\Entity</argument>
+        <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\src\ForumBundle\Entity</argument>
+        <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\src\MessengerBundle\Entity</argument>
       </argument>
+    </service>
+    <service id="doctrine.orm.default_xml_metadata_driver" class="Doctrine\ORM\Mapping\Driver\SimplifiedXmlDriver" public="false">
+      <argument type="collection">
+        <argument key="C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle\Resources\config\doctrine">FOS\MessageBundle\Entity</argument>
+      </argument>
+      <call method="setGlobalBasename">
+        <argument>mapping</argument>
+      </call>
     </service>
     <service id="doctrine.orm.default_metadata_driver" class="Doctrine\Common\Persistence\Mapping\Driver\MappingDriverChain" public="false">
       <call method="addDriver">
         <argument type="service" id="doctrine.orm.default_annotation_metadata_driver"/>
         <argument>baseBundle\Entity</argument>
+      </call>
+      <call method="addDriver">
+        <argument type="service" id="doctrine.orm.default_annotation_metadata_driver"/>
+        <argument>ForumBundle\Entity</argument>
+      </call>
+      <call method="addDriver">
+        <argument type="service" id="doctrine.orm.default_annotation_metadata_driver"/>
+        <argument>MessengerBundle\Entity</argument>
+      </call>
+      <call method="addDriver">
+        <argument type="service" id="doctrine.orm.default_xml_metadata_driver"/>
+        <argument>FOS\MessageBundle\Entity</argument>
       </call>
       <call method="addDriver">
         <argument type="service">
@@ -4299,6 +4508,170 @@
         <argument type="service" id="service_container"/>
       </call>
     </service>
+    <service id="knp_paginator" class="Knp\Component\Pager\Paginator" lazy="true">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <call method="setDefaultPaginatorOptions">
+        <argument type="collection">
+          <argument key="pageParameterName">page</argument>
+          <argument key="sortFieldParameterName">sort</argument>
+          <argument key="sortDirectionParameterName">direction</argument>
+          <argument key="filterFieldParameterName">filterField</argument>
+          <argument key="filterValueParameterName">filterValue</argument>
+          <argument key="distinct">true</argument>
+        </argument>
+      </call>
+    </service>
+    <service id="knp_paginator.subscriber.paginate" class="Knp\Component\Pager\Event\Subscriber\Paginate\PaginationSubscriber">
+      <tag name="knp_paginator.subscriber"/>
+    </service>
+    <service id="knp_paginator.subscriber.sortable" class="Knp\Component\Pager\Event\Subscriber\Sortable\SortableSubscriber">
+      <tag name="knp_paginator.subscriber"/>
+    </service>
+    <service id="knp_paginator.subscriber.filtration" class="Knp\Component\Pager\Event\Subscriber\Filtration\FiltrationSubscriber">
+      <tag name="knp_paginator.subscriber"/>
+    </service>
+    <service id="knp_paginator.subscriber.sliding_pagination" class="Knp\Bundle\PaginatorBundle\Subscriber\SlidingPaginationSubscriber">
+      <tag name="knp_paginator.subscriber"/>
+      <tag name="kernel.event_listener" event="kernel.request" method="onKernelRequest"/>
+      <argument type="collection">
+        <argument key="defaultPaginationTemplate">KnpPaginatorBundle:Pagination:twitter_bootstrap_v3_pagination.html.twig</argument>
+        <argument key="defaultSortableTemplate">KnpPaginatorBundle:Pagination:sortable_link.html.twig</argument>
+        <argument key="defaultFiltrationTemplate">@KnpPaginator/Pagination/filtration.html.twig</argument>
+        <argument key="defaultPageRange">5</argument>
+      </argument>
+    </service>
+    <service id="knp_paginator.helper.processor" class="Knp\Bundle\PaginatorBundle\Helper\Processor">
+      <argument type="service" id="router.default"/>
+      <argument type="service" id="translator.data_collector"/>
+    </service>
+    <service id="knp_paginator.twig.extension.pagination" class="Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension">
+      <tag name="twig.extension"/>
+      <argument type="service" id="knp_paginator.helper.processor"/>
+    </service>
+    <service id="fos_message.message_manager.default" class="FOS\MessageBundle\EntityManager\MessageManager" public="false">
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
+      <argument>MessengerBundle\Entity\Message</argument>
+      <argument>MessengerBundle\Entity\MessageMetadata</argument>
+    </service>
+    <service id="fos_message.thread_manager.default" class="FOS\MessageBundle\EntityManager\ThreadManager" public="false">
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
+      <argument>MessengerBundle\Entity\Thread</argument>
+      <argument>MessengerBundle\Entity\ThreadMetadata</argument>
+      <argument type="service" id="fos_message.message_manager.default"/>
+    </service>
+    <service id="fos_message.sender.default" class="FOS\MessageBundle\Sender\Sender" public="false">
+      <argument type="service" id="fos_message.message_manager.default"/>
+      <argument type="service" id="fos_message.thread_manager.default"/>
+      <argument type="service" id="debug.event_dispatcher"/>
+    </service>
+    <service id="fos_message.composer.default" class="FOS\MessageBundle\Composer\Composer" public="false">
+      <argument type="service" id="fos_message.message_manager.default"/>
+      <argument type="service" id="fos_message.thread_manager.default"/>
+    </service>
+    <service id="fos_message.participant_provider.default" class="FOS\MessageBundle\Security\ParticipantProvider" public="false">
+      <argument type="service" id="security.token_storage"/>
+    </service>
+    <service id="fos_message.authorizer.default" class="FOS\MessageBundle\Security\Authorizer" public="false">
+      <argument type="service" id="fos_message.participant_provider.default"/>
+    </service>
+    <service id="fos_message.provider.default" class="FOS\MessageBundle\Provider\Provider" public="false">
+      <argument type="service" id="fos_message.thread_manager.default"/>
+      <argument type="service" id="fos_message.message_manager.default"/>
+      <argument type="service" id="fos_message.thread_reader.default"/>
+      <argument type="service" id="fos_message.authorizer.default"/>
+      <argument type="service" id="fos_message.participant_provider.default"/>
+    </service>
+    <service id="fos_message.message_reader.default" class="FOS\MessageBundle\Reader\Reader" public="false">
+      <argument type="service" id="fos_message.participant_provider.default"/>
+      <argument type="service" id="fos_message.message_manager.default"/>
+      <argument type="service" id="debug.event_dispatcher"/>
+    </service>
+    <service id="fos_message.thread_reader.default" class="FOS\MessageBundle\Reader\Reader" public="false">
+      <argument type="service" id="fos_message.participant_provider.default"/>
+      <argument type="service" id="fos_message.thread_manager.default"/>
+      <argument type="service" id="debug.event_dispatcher"/>
+    </service>
+    <service id="fos_message.deleter.default" class="FOS\MessageBundle\Deleter\Deleter" public="false">
+      <argument type="service" id="fos_message.authorizer.default"/>
+      <argument type="service" id="fos_message.participant_provider.default"/>
+      <argument type="service" id="debug.event_dispatcher"/>
+    </service>
+    <service id="fos_message.twig_extension.default" class="FOS\MessageBundle\Twig\Extension\MessageExtension" public="false">
+      <tag name="twig.extension" alias="fos_message"/>
+      <argument type="service" id="fos_message.participant_provider.default"/>
+      <argument type="service" id="fos_message.provider.default"/>
+      <argument type="service" id="fos_message.authorizer.default"/>
+    </service>
+    <service id="fos_message.search_query_factory.default" class="FOS\MessageBundle\Search\QueryFactory">
+      <argument type="service" id="request_stack"/>
+      <argument>q</argument>
+    </service>
+    <service id="fos_message.search_finder.default" class="FOS\MessageBundle\Search\Finder">
+      <argument type="service" id="fos_message.participant_provider.default"/>
+      <argument type="service" id="fos_message.thread_manager.default"/>
+    </service>
+    <service id="fos_message.new_thread_form.type.default" class="FOS\MessageBundle\FormType\NewThreadMessageFormType" public="false"/>
+    <service id="fos_message.new_thread_multiple_form.type" class="FOS\MessageBundle\FormType\NewThreadMultipleMessageFormType" public="false"/>
+    <service id="fos_message.reply_form.type.default" class="FOS\MessageBundle\FormType\ReplyMessageFormType" public="false"/>
+    <service id="fos_message.new_thread_form.factory.default" class="FOS\MessageBundle\FormFactory\NewThreadMessageFormFactory" public="false">
+      <argument type="service" id="form.factory"/>
+      <argument>FOS\MessageBundle\FormType\NewThreadMultipleMessageFormType</argument>
+      <argument>message</argument>
+      <argument>FOS\MessageBundle\FormModel\NewThreadMultipleMessage</argument>
+    </service>
+    <service id="fos_message.reply_form.factory.default" class="FOS\MessageBundle\FormFactory\ReplyMessageFormFactory" public="false">
+      <argument type="service" id="form.factory"/>
+      <argument>FOS\MessageBundle\FormType\ReplyMessageFormType</argument>
+      <argument>message</argument>
+      <argument>FOS\MessageBundle\FormModel\ReplyMessage</argument>
+    </service>
+    <service id="fos_message.new_thread_form.handler.default" class="FOS\MessageBundle\FormHandler\NewThreadMessageFormHandler" public="false">
+      <argument type="service" id="request_stack"/>
+      <argument type="service" id="fos_message.composer.default"/>
+      <argument type="service" id="fos_message.sender.default"/>
+      <argument type="service" id="fos_message.participant_provider.default"/>
+    </service>
+    <service id="fos_message.new_thread_multiple_form.handler" class="FOS\MessageBundle\FormHandler\NewThreadMultipleMessageFormHandler" public="false">
+      <argument type="service" id="request_stack"/>
+      <argument type="service" id="fos_message.composer.default"/>
+      <argument type="service" id="fos_message.sender.default"/>
+      <argument type="service" id="fos_message.participant_provider.default"/>
+    </service>
+    <service id="fos_message.reply_form.handler.default" class="FOS\MessageBundle\FormHandler\ReplyMessageFormHandler" public="false">
+      <argument type="service" id="request_stack"/>
+      <argument type="service" id="fos_message.composer.default"/>
+      <argument type="service" id="fos_message.sender.default"/>
+      <argument type="service" id="fos_message.participant_provider.default"/>
+    </service>
+    <service id="fos_message.recipients_data_transformer" class="FOS\MessageBundle\DataTransformer\RecipientsDataTransformer" public="false">
+      <argument type="service" id="fos_user.user_to_username_transformer"/>
+    </service>
+    <service id="fos_message.recipients_selector" class="FOS\MessageBundle\FormType\RecipientsType">
+      <tag name="form.type" alias="recipients_selector"/>
+      <argument type="service" id="fos_message.recipients_data_transformer"/>
+    </service>
+    <service id="fos_message.validator.authorization" class="FOS\MessageBundle\Validator\AuthorizationValidator">
+      <tag name="validator.constraint_validator" alias="fos_message.validator.authorization"/>
+      <argument type="service" id="fos_message.authorizer.default"/>
+    </service>
+    <service id="fos_message.validator.reply_authorization" class="FOS\MessageBundle\Validator\ReplyAuthorizationValidator">
+      <tag name="validator.constraint_validator" alias="fos_message.validator.reply_authorization"/>
+      <argument type="service" id="fos_message.authorizer.default"/>
+      <argument type="service" id="fos_message.participant_provider.default"/>
+    </service>
+    <service id="fos_message.validator.spam" class="FOS\MessageBundle\Validator\SpamValidator">
+      <tag name="validator.constraint_validator" alias="fos_message.validator.spam"/>
+      <argument type="service" id="fos_message.noop_spam_detector"/>
+    </service>
+    <service id="fos_message.validator.self_recipient" class="FOS\MessageBundle\Validator\SelfRecipientValidator">
+      <tag name="validator.constraint_validator" alias="fos_message.validator.self_recipient"/>
+      <argument type="service" id="fos_message.participant_provider.default"/>
+    </service>
+    <service id="fos_message.noop_spam_detector" class="FOS\MessageBundle\SpamDetection\NoopSpamDetector" public="false"/>
+    <service id="fos_message.akismet_spam_detector" class="FOS\MessageBundle\SpamDetection\AkismetSpamDetector" public="false">
+      <argument type="service" id="ornicar_akismet"/>
+      <argument type="service" id="fos_message.participant_provider.default"/>
+    </service>
     <service id="twig.extension.dump" class="Symfony\Bridge\Twig\Extension\DumpExtension" public="false">
       <tag name="twig.extension"/>
       <argument type="service" id="var_dumper.cloner"/>
@@ -4506,9 +4879,10 @@
         <argument key="translation.loader.yml" type="service" id="translation.loader.yml"/>
       </argument>
     </service>
-    <service id="service_locator.5b4ccf77f01b1cf8797c86f4e9b37cd6" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.31553de300c2a087f1e5ac1748004427" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="FOS\MessageBundle\FormType\RecipientsType" type="service" id="fos_message.recipients_selector"/>
         <argument key="FOS\UserBundle\Form\Type\ChangePasswordFormType" type="service" id="fos_user.change_password.form.type"/>
         <argument key="FOS\UserBundle\Form\Type\ProfileFormType" type="service" id="fos_user.profile.form.type"/>
         <argument key="FOS\UserBundle\Form\Type\RegistrationFormType" type="service" id="fos_user.registration.form.type"/>
@@ -4699,14 +5073,22 @@
         <argument key="twig" type="service" id="twig"/>
       </argument>
     </service>
-    <service id="service_locator.39e66930232432ca5ba91e98fdd8a17b" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.d1035efbd4e2f2796cab4e77371ef95b" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="FOS\MessageBundle\Validator\AuthorizationValidator" type="service" id="fos_message.validator.authorization"/>
+        <argument key="FOS\MessageBundle\Validator\ReplyAuthorizationValidator" type="service" id="fos_message.validator.reply_authorization"/>
+        <argument key="FOS\MessageBundle\Validator\SelfRecipientValidator" type="service" id="fos_message.validator.self_recipient"/>
+        <argument key="FOS\MessageBundle\Validator\SpamValidator" type="service" id="fos_message.validator.spam"/>
         <argument key="Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntityValidator" type="service" id="doctrine.orm.validator.unique"/>
         <argument key="Symfony\Component\Security\Core\Validator\Constraints\UserPasswordValidator" type="service" id="security.validator.user_password"/>
         <argument key="Symfony\Component\Validator\Constraints\EmailValidator" type="service" id="validator.email"/>
         <argument key="Symfony\Component\Validator\Constraints\ExpressionValidator" type="service" id="validator.expression"/>
         <argument key="doctrine.orm.validator.unique" type="service" id="doctrine.orm.validator.unique"/>
+        <argument key="fos_message.validator.authorization" type="service" id="fos_message.validator.authorization"/>
+        <argument key="fos_message.validator.reply_authorization" type="service" id="fos_message.validator.reply_authorization"/>
+        <argument key="fos_message.validator.self_recipient" type="service" id="fos_message.validator.self_recipient"/>
+        <argument key="fos_message.validator.spam" type="service" id="fos_message.validator.spam"/>
         <argument key="security.validator.user_password" type="service" id="security.validator.user_password"/>
         <argument key="validator.expression" type="service" id="validator.expression"/>
       </argument>
@@ -4722,7 +5104,7 @@
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>51LG8Q6FoD</argument>
       <argument>0</argument>
-      <argument>9GvHohlhhwMcEb80zgG-29</argument>
+      <argument>UWUlshd8veWfO1svHCTmCZ</argument>
       <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4730,7 +5112,7 @@
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>+4s8R639k-</argument>
       <argument>0</argument>
-      <argument>9GvHohlhhwMcEb80zgG-29</argument>
+      <argument>UWUlshd8veWfO1svHCTmCZ</argument>
       <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4738,7 +5120,7 @@
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>qLx3WzRsAT</argument>
       <argument>0</argument>
-      <argument>9GvHohlhhwMcEb80zgG-29</argument>
+      <argument>UWUlshd8veWfO1svHCTmCZ</argument>
       <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4746,7 +5128,7 @@
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>yu48GOjZCC</argument>
       <argument>0</argument>
-      <argument>9GvHohlhhwMcEb80zgG-29</argument>
+      <argument>UWUlshd8veWfO1svHCTmCZ</argument>
       <argument>C:\Users\Amine Sboui\PhpstormProjects\pidevWEB_v1.0\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4856,6 +5238,25 @@
     <service id="fos_user.user_manager" alias="fos_user.user_manager.default"/>
     <service id="fos_user.mailer" alias="fos_user.mailer.default"/>
     <service id="fos_user.session" alias="session" public="false"/>
+    <service id="Knp\Component\Pager\PaginatorInterface" alias="knp_paginator"/>
+    <service id="fos_message.message_manager" alias="fos_message.message_manager.default"/>
+    <service id="fos_message.thread_manager" alias="fos_message.thread_manager.default"/>
+    <service id="fos_message.sender" alias="fos_message.sender.default"/>
+    <service id="fos_message.composer" alias="fos_message.composer.default"/>
+    <service id="fos_message.provider" alias="fos_message.provider.default"/>
+    <service id="fos_message.participant_provider" alias="fos_message.participant_provider.default"/>
+    <service id="fos_message.authorizer" alias="fos_message.authorizer.default"/>
+    <service id="fos_message.message_reader" alias="fos_message.message_reader.default"/>
+    <service id="fos_message.thread_reader" alias="fos_message.thread_reader.default"/>
+    <service id="fos_message.deleter" alias="fos_message.deleter.default"/>
+    <service id="fos_message.spam_detector" alias="fos_message.noop_spam_detector"/>
+    <service id="fos_message.twig_extension" alias="fos_message.twig_extension.default"/>
+    <service id="fos_message.new_thread_form.factory" alias="fos_message.new_thread_form.factory.default"/>
+    <service id="fos_message.new_thread_form.handler" alias="fos_message.new_thread_multiple_form.handler"/>
+    <service id="fos_message.reply_form.factory" alias="fos_message.reply_form.factory.default"/>
+    <service id="fos_message.reply_form.handler" alias="fos_message.reply_form.handler.default"/>
+    <service id="fos_message.search_query_factory" alias="fos_message.search_query_factory.default"/>
+    <service id="fos_message.search_finder" alias="fos_message.search_finder.default"/>
     <service id="Symfony\Component\Templating\EngineInterface" alias="templating.engine.twig" public="false"/>
     <service id="Symfony\Bundle\FrameworkBundle\Templating\EngineInterface" alias="templating.engine.twig" public="false"/>
     <service id="console.command.symfony_bundle_securitybundle_command_userpasswordencodercommand" alias="security.console.user_password_encoder_command"/>

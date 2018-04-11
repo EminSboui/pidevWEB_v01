@@ -1,6 +1,21 @@
+admin:
+    resource: "@AdminBundle/Resources/config/routing.yml"
+    prefix:   /admin
+
+messenger:
+    resource: "@MessengerBundle/Resources/config/routing.yml"
+    prefix:   /messenger
+
+forum:
+    resource: "@ForumBundle/Resources/config/routing.yml"
+    prefix:   /forum
+
 base:
     resource: "@baseBundle/Resources/config/routing.yml"
     prefix:   /
+fos_message:
+    resource: "@FOSMessageBundle/Resources/config/routing.xml"
+    prefix: /messenger
 
 app:
     resource: '@AppBundle/Controller/'

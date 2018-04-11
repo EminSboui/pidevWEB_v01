@@ -56,6 +56,10 @@ class ComposerStaticInit1c56b9f8baaef3511324c8a024f1eb72
         array (
             'Monolog\\' => 8,
         ),
+        'K' => 
+        array (
+            'Knp\\Bundle\\PaginatorBundle\\' => 27,
+        ),
         'I' => 
         array (
             'Incenteev\\ParameterHandler\\' => 27,
@@ -180,6 +184,10 @@ class ComposerStaticInit1c56b9f8baaef3511324c8a024f1eb72
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
+        'Knp\\Bundle\\PaginatorBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/knplabs/knp-paginator-bundle',
+        ),
         'Incenteev\\ParameterHandler\\' => 
         array (
             0 => __DIR__ . '/..' . '/incenteev/composer-parameter-handler',
@@ -235,6 +243,20 @@ class ComposerStaticInit1c56b9f8baaef3511324c8a024f1eb72
             'SensioLabs\\Security' => 
             array (
                 0 => __DIR__ . '/..' . '/sensiolabs/security-checker',
+            ),
+        ),
+        'K' => 
+        array (
+            'Knp\\Component' => 
+            array (
+                0 => __DIR__ . '/..' . '/knplabs/knp-components/src',
+            ),
+        ),
+        'F' => 
+        array (
+            'FOS\\MessageBundle' => 
+            array (
+                0 => __DIR__ . '/..' . '/friendsofsymfony/message-bundle',
             ),
         ),
         'D' => 

@@ -3,5 +3,6 @@ base_homepage:
     defaults: { _controller: baseBundle:Default:index }
 
 register:
-    path:     /register/
+    path:     /registration
     defaults: { _controller: baseBundle:Registration:register }
+

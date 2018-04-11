@@ -42,7 +42,7 @@ class RegistrationController extends Controller
                 $user->setEnabled(true);
                 if ($user->getService() !== null) {
                     $user->addRole("ROLE_PASTRY");
-                } else $user->addRole("ROLE_USER");
+                } else $user->addRole("ROLE_CLIENT");
 
                 $em->persist($user);
                 $em->flush();

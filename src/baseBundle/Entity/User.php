@@ -2,7 +2,7 @@
 
 namespace baseBundle\Entity;
 
-use baseBundle\baseBundle;
+use FOS\MessageBundle\Model\ParticipantInterface;
 use Doctrine\ORM\Mapping as ORM;
 use FOS\UserBundle\Model\User as BaseUser;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -13,7 +13,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Table(name="user", uniqueConstraints={@ORM\UniqueConstraint(name="UNIQ_957A6479A0D96FBF", columns={"email_canonical"}), @ORM\UniqueConstraint(name="UNIQ_957A647992FC23A8", columns={"username_canonical"}), @ORM\UniqueConstraint(name="UNIQ_957A6479C05FB297", columns={"confirmation_token"})})
  * @ORM\Entity
  */
-class User extends BaseUser
+class User extends BaseUser implements ParticipantInterface
 {
     /**
      * @var integer
@@ -28,14 +28,14 @@ class User extends BaseUser
     /**
      * @var string
      *
-     * @ORM\Column(name="firstname", type="string", length=255, nullable=false)
+     * @ORM\Column(name="firstname", type="string", length=255, nullable=true)
      */
     private $firstname;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="lastname", type="string", length=255, nullable=false)
+     * @ORM\Column(name="lastname", type="string", length=255, nullable=true)
      */
     private $lastname;
 
@@ -61,7 +61,7 @@ class User extends BaseUser
     private $town;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string" )
      * @Assert\NotBlank(message="Ajouter une image jpg")
      * @Assert\Image(mimeTypes={ "image/jpeg" , "image/png" , "image/gif" , "image/jpg" } , mimeTypesMessage = "Le fichier choisi n'est pas valide")
      */

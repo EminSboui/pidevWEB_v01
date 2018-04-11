@@ -3,8 +3,14 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
 {% block fos_user_content %}
-    <p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
-    {% if targetUrl %}
-    <p><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
-    {% endif %}
+    <section class="parallax-window" data-parallax="scroll" data-image-src="{{ asset('Assets/img/bg_blog.jpg') }}" data-natural-width="1400" data-natural-height="470">
+        <div class="parallax-content-1">
+            <div class="animated fadeInDown">
+                <h1>Congratulation</h1>
+                <p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p></div>
+            {% if targetUrl %}
+                <p><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
+            {% endif %}
+        </div>
+    </section><!-- End section -->
 {% endblock fos_user_content %}
